@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./lib/jquery-3.7.1.js"></script>
+        <script src="index.js"></script>
+        <style>
+            html {
+                background-color: #C0C0C0;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 90%;
+                border: 3px solid #B5A642;
+                border-radius: 15px;
+            }
+
+            .chocolateBox {
+                border: 4px solid black;
+                border-right: none;
+                flex: 0 0 400px;
+                height: 150px;
+                background-color: #fffdd0;
+                margin: 5px;
+                color: #241de2;
+                box-sizing: border-box;
+                padding: 2px;
+                margin: 2px;
+                font-size: medium;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+
+            .imageContainer {
+                border: 4px solid black;
+                border-left: none;
+                width: 150px;
+                height: 150px;
+                background-color: #fffdd0;
+                color: rgb(239, 208, 162);
+                box-sizing: border-box;
+                margin:2px;
+                margin-left:0px;
+                padding:0px;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+
+            .imageContainer img {
+                width: 100%; 
+                height: 100%;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+            
+            button {
+                background-color: #FFFDD0;
+                color: #241de2;
+                font-size: larger;
+                text-align:center;
+            }
+      
+            h1 {
+                width: 100%;
+                background-color: #FFFDD0;
+                color: #241de2;
+                text-align: center;
+                font-size: xx-large;
+                box-shadow: 3px 3px 3px
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            button:hover {
+            background-color: blue;
+            color: white;
+            box-shadow: 3px 3px 3px
+        }
+        </style>
+    </head>
+  
+    <body>
+        <h1>CHOCOLATES</h1>
+        <h2>Choose your option</h2>
+
+        <p>
+            <button type = "button" onclick = "randomSample()">Choose Random Sample</button>
+            <button type = "button" onclick = "toggleCalories()">Toggle Calories</button>
+            <button type = "button" onclick = "toggleIngredients()">Toggle Ingredients</button>
+            <button type = "button" onclick = "toggleImages()">Toggle Images</button>
+            <button type = "button" onclick = "toggleAllContent()">Toggle All Extra Chocolate Information</button>
+        </p>
+
+        <div class = "wrapper">
+            <div class="chocolateBox">
+                1
+                <p class = "chocolateName">Plain Milk Chocolate</p>
+                <p class = "calorieCount">Calories: 110</p> 
+                <p class = "ingredients">Ingredients: cocoa butter, milk sugar</p>
+            </div>
+            <div class = "imageContainer">
+                <img src = "images\\plainMilk.jpg" alt = "plain milk chocolate">
+            </div>
+            
+            <div class="chocolateBox">
+                2
+                <p class = "chocolateName">Plain Dark Chocolate</p>
+                <p class = "calorieCount">Calories: 100</p>
+                <p class = "ingredients">Ingredients: cocoa butter, milk, sugar</p>
+            </div>
+            <div class = "imageContainer">
+                <img src="images\\plainDark.jpg" alt="plain dark chocolate">
+            </div>
+
+            <div class="chocolateBox">
+                3
+                <p class = "chocolateName">Plain Hybrid Chocolate</p>
+                <p class = "calorieCount">Calories: 105</p>
+                <p class = "ingredients">Ingredients: cocoa butter, milk, sugar</p>
+            </div>
+            <div class = "imageContainer">
+                <img src="images\\plainHybrid.jpg" alt="plain hybrid chocolate">
+            </div>
+
+            <div class="chocolateBox">
+                4
+                <p class = "chocolateName">Nut Butter Cup</p>
+                <p class = "calorieCount">Calories: 130</p>
+                <p class = "ingredients">Ingredients: cocoa butter, milk, sugar</p>
+            </div>
+            <div class = "imageContainer">
+                <img src="images\\nutButterCup.jpg" alt="nut butter cup">
+            </div>
+
+            <div class="chocolateBox">
+                5
+                <p class = "chocolateName">Bailey's Cup</p>
+                <p class = "calorieCount">Calories: 90</p>
+                <p class = "ingredients">Ingredients: cocoa butter, milk, sugar, rum, coconut</p>
+            </div>
+            <div class = "imageContainer">
+                <img src="images\\baileysCup.jpg" alt="bailey's cup">
+            </div>
+
+            <div class="chocolateBox">
+                6
+                <p class = "chocolateName">Rum Barrel</p>
+                <p class = "calorieCount">Calories: 110</p>
+                <p class = "ingredients">Ingredients: cocoa butter, milk, sugar, rum, coconut</p>
+            </div>
+            <div class = "imageContainer">
+                <img src="images\\rumBarrel.jpg" alt="rum barrel">
+            </div>
+
+            <div class="chocolateBox">
+                7
+                <p class = "chocolateName">Orange Fondant</p>
+                <p class = "calorieCount">Calories: 125</p>
+                <p class = "ingredients">Ingredients: cocoa butter, milk, sugar, orange cream, orange zest</p>
+            </div>
+            <div class = "imageContainer">
+                <img src="images\\orangeFondant.jpg" alt="orange fondant">
+            </div>
+
+            <div class="chocolateBox">
+                8
+                <p class = "chocolateName">Cappuccino Cup</p>
+                <p class = "calorieCount">Calories: 130</p>
+                <p class = "ingredients">Ingredients: cocoa butter, milk, sugar, coffee-vanilla cream, grated coffee beans</p>
+            </div>
+            <div class = "imageContainer">
+                <img src="images\\cappuccinoCup.jpg" alt="cappuccino cup">
+            </div>
+
+            <div class="chocolateBox">
+                9
+                <p class = "chocolateName">Pistachio Diamond</p>
+                <p class = "calorieCount">Calories: 140</p>
+                <p class = "ingredients">Ingredients: cocoa butter, milk, sugar, nut butter, pistachio</p>
+            </div>
+            <div class = "imageContainer">
+                <img src="images\\pistachioDiamond.jpg" alt="pistachio diamond">
+            </div>
+
+            <div class="chocolateBox">
+                10
+                <p class = "chocolateName">Toffee Crunch</p>
+                <p class = "calorieCount">Calories: 130</p>
+                <p>Ingredients: cocoa butter, milk, sugar, toffee, salt, toffee brittle</p>
+            </div>
+            <div class = "imageContainer">
+                <img src="images\\toffeeCrunch.jpg" alt="toffee crunch">
+            </div>
+        </div>
+    </body>
+</html>
